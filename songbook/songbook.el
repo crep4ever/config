@@ -38,7 +38,7 @@
 (defconst songbook-font-lock-keywords-1
   (list
 					;songbook environments
-   '("\\\\\\(begin{tab}\\|end{tab}\\|begin\\(song\\|verse\\|chorus\\)\\|end\\(song\\|verse\\|chorus\\)\\)" . font-lock-type-face)
+   '("\\\\\\(begin{tab}\\|end{tab}\\|begin\\(song\\|verse\\|chorus\\|scripture\\)\\|end\\(song\\|verse\\|chorus\\|scripture\\)\\)" . font-lock-type-face)
    '("\\('\\w*'\\)" . font-lock-variable-name-face))
   "Minimal highlighting expressions for Songbook mode.")
 
@@ -46,7 +46,7 @@
   (append songbook-font-lock-keywords-1
 	  (list
 					; songbook commands
-	   '("\\\\\\(capo\\|gtab\\|lilypond\\|rep\\|echo\\|dots\\|cover\\|image\\|musicnote\\|textnote\\)" . font-lock-keyword-face)
+	   '("\\\\\\(capo\\|gtab\\|lilypond\\|rep\\|echo\\|dots\\|cover\\|image\\|musicnote\\|textnote\\|emph\\|nolyrics\\)" . font-lock-keyword-face)
 	   '("\\\\\\[[^\]]+\]\\|\\\\bar" . 'font-lock-variable-name-face) ;chords are in the form \[C7]
 	   '("\\\\single" . font-lock-constant-face) ; tab's environment commands
 	   '("``.+" . font-lock-string-face))) ; latex style strings //fixme: catch between `` and ''
@@ -56,7 +56,7 @@
   (append songbook-font-lock-keywords-2
 	  (list
 					; songbook preprocessing
-	   '("\\<\\(songcolumns\\)\\>" . font-lock-preprocessor-face)))
+	   '("\\<\\(songcolumns\\|selectlanguage\\)\\>" . font-lock-preprocessor-face)))
   "Balls-out highlighting in SONGBOOK mode.")
 
 (defvar songbook-font-lock-keywords songbook-font-lock-keywords-3
