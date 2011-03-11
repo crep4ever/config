@@ -16,11 +16,14 @@ apt-get install $FLAGS audacity audacious audacious-plugins easytag gimp gstream
 #Internet
 apt-get install $FLAGS filezilla gm-notify ;
 
+#Web
+apt-get install $FLAGS filezilla;
+
 #LaTeX
 apt-get install $FLAGS texlive texlive-lang-french texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra bibtex2html;
 
 #Tools
-apt-get install $FLAGS gparted aspell-fr gcstar unrar ntfs-3g pdf2svg pdfmod htop ubuntu-restricted-extras lame;
+apt-get install $FLAGS gparted aspell-fr gcstar unrar ntfs-3g pdf2svg pdfmod htop ubuntu-restricted-extras lame nautilus-open-terminal;
 
 apt-get upgrade --yes --quiet;
 
