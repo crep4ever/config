@@ -2,10 +2,11 @@
 #Author: Romain Goffe
 #Date: 07/12/2010
 #Description: setup configuration files in home directory
-
+#todo el-get + mplayer config + inkscape texttex
 cp bashrc $HOME/.bashrc ;
 source $HOME/.bashrc ;
 cp gitconfig $HOME/.gitconfig ;
+cp face $HOME/.face ;
 
 #emacs
 cp emacs $HOME/.emacs ;
