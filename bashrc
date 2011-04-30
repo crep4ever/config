@@ -94,9 +94,13 @@ fi
 #Personal configuration
 #--------------------------------------------------------
 
+#Environment variables
+
 export PATH=$HOME/.local/:$HOME/.local/bin:$PATH
 export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude=\*~ --binary-files=without-match --line-number"
 export EDITOR=emacs
+
+#Aliases
 
 alias cp='cp --interactive'
 alias mv='mv --interactive'
@@ -107,3 +111,9 @@ alias maek='make'
 alias amke='make'
 alias dc='cd'
 alias rmsvn='find . -name ".svn" -type d -exec rm -rf {} \;'
+
+#History
+
+shopt -s histappend
+HISTSIZE=100000
+HISTFILESIZE=250000
