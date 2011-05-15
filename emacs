@@ -6,6 +6,7 @@
 (autoload 'songbook-mode "songbook" "Major mode for Patacrep's songbooks" t)
 (setq auto-mode-alist (cons '("\\.icc$" . c++-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.mdwn$" . markdown-mode) auto-mode-alist))
+(autoload 'rainbow-mode "rainbow-mode" "Highlight color codes" t)
 
 ;; Shortcuts
 (global-set-key "\M-g" 'goto-line)
