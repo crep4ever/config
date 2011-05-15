@@ -114,6 +114,5 @@ alias rmsvn='find . -name ".svn" -type d -exec rm -rf {} \;'
 
 #History
 
-shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=250000
