@@ -2,7 +2,7 @@
 #Author: Romain Goffe
 #Date: 07/12/2010
 #Description: setup configuration files in home directory
-#todo el-get + inkscape texttex
+#todo el-get 
 
 cp bashrc $HOME/.bashrc
 source $HOME/.bashrc
@@ -20,6 +20,9 @@ rm -rf $HOME/.config/emacs/
 rm -f $HOME/.config/emacs
 cp -r emacs.d/ $HOME/.config/
 mv $HOME/.config/emacs.d/ $HOME/.config/emacs
+
+#inkscape
+mv inkscape/*.* $HOME/.config/inkscape/extensions
 
 #songbook
 mkdir -p $HOME/.local/share/gtksourceview-2.0/language-specs/
