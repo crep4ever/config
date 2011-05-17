@@ -4,22 +4,28 @@
 #Description: packages install for ubuntu
 #needs to be run as root
 
-FLAGS="--yes --quiet --ignore-missing" # --simulate"
+FLAGS=" --yes --quiet --ignore-missing "
 
 apt-get update ;
 
 #Dev
-apt-get $FLAGS install awesome build-essential emacs git-core qgit libmagick++-dev perl python perl subversion cmake valgrind kcachegrind qt4-dev-tools libqt4-sql-sqlite libqt4-declarative ;
+sudo apt-get install $FLAGS awesome build-essential emacs git-core qgit libmagick++-dev perl python perl subversion cmake valgrind qt4-dev-tools libqt4-sql-sqlite libqt4-declarative;
 
 #Multimedia
-apt-get $FLAGS install audacity audacious audacious-plugins easytag gimp gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad imagemagick inkscape mplayer xcfa arista vlc lilypond gimp gimp-plugin-registry ;
+sudo apt-get install $FLAGS audacity audacious audacious-plugins easytag gimp gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad imagemagick inkscape mplayer xcfa arista vlc lilypond gimp gimp-plugin-registry cheese pinta;
+
+#Internet
+apt-get install $FLAGS filezilla gm-notify ;
+
+#Web
+apt-get install $FLAGS filezilla;
 
 #LaTeX
-apt-get $FLAGS install texlive texlive-lang-french texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra texlive-xetex ;
+apt-get install $FLAGS texlive texlive-lang-french texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra bibtex2html;
 
 #Tools
-apt-get $FLAGS install filezilla transfig gparted aspell-fr gcstar unrar ntfs-3g pdf2svg pdfmod htop ubuntu-restricted-extras ;
+apt-get install $FLAGS gparted aspell-fr gcstar unrar ntfs-3g pdf2svg pdfmod htop ubuntu-restricted-extras lame nautilus-open-terminal;
 
-apt-get --yes --quiet upgrade ;
+apt-get upgrade --yes --quiet;
 
 exit 0
