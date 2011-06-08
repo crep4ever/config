@@ -22,6 +22,7 @@ cp -r emacs.d/ $HOME/.config/
 mv $HOME/.config/emacs.d/ $HOME/.config/emacs
 
 #inkscape
+mkdir -p $HOME/.config/inkscape/extensions
 mv inkscape/*.* $HOME/.config/inkscape/extensions
 
 #songbook
