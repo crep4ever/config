@@ -25,9 +25,25 @@ mv $HOME/.config/emacs.d/ $HOME/.config/emacs
 mkdir -p $HOME/.config/inkscape/extensions
 mv inkscape/*.* $HOME/.config/inkscape/extensions
 
-#songbook
+#retrieve git repo
+cd $HOME
+mkdir $HOME/git && cd $HOME/git
+git clone http://github.com/crep4ever/songbook-client.git
+git clone http://github.com/crep4ever/songbook-documentation.git
+git clone http://github.com/crep4ever/songbook-gedit-mode.git
+git clone http://github.com/crep4ever/songbook-emacs-mode.git
+git clone http://github.com/crep4ever/cv.git
+git clone http://github.com/crep4ever/biblio.git
+git clone git://git.lohrun.net/songbook.git
+
+#make a few links
+cd $HOME
+ln -s git/songbook songbook
+ln -s git/songbook-client songbook-client
+
+#install songbook modes
 mkdir -p $HOME/.local/share/gtksourceview-2.0/language-specs/
 mkdir -p $HOME/.local/share/mime/packages/
-cp songbook/songbook.el $HOME/.config/emacs
-cp songbook/songbook.lang  $HOME/.local/share/gtksourceview-2.0/language-specs
-cp songbook/songbook.xml  $HOME/.local/share/mime/packages
+cp git/songbook-emacs-mode/songbook.el $HOME/.config/emacs
+cp git/songbook-gedit-mode/songbook.lang  $HOME/.local/share/gtksourceview-2.0/language-specs
+cp git/songbook-gedit-mode/songbook.xml  $HOME/.local/share/mime/packages
