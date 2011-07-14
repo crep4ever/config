@@ -116,3 +116,7 @@ alias rmsvn='find . -name ".svn" -type d -exec rm -rf {} \;'
 
 HISTSIZE=100000
 HISTFILESIZE=250000
+
+alias git-update='cd $HOME/git; for dir in `ls .`; do cd $dir; git pull origin master; cd ..; done;'
+
+alias git-status='cd $HOME/git; for dir in `ls .`; do cd $dir; git status; cd ..; done;'
