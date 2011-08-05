@@ -14,11 +14,8 @@ sudo apt-get install $FLAGS awesome build-essential emacs git-core qgit libmagic
 #Multimedia
 sudo apt-get install $FLAGS audacity audacious audacious-plugins easytag gimp gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad imagemagick inkscape mplayer xcfa arista vlc lilypond gimp gimp-plugin-registry cheese pinta;
 
-#Internet
-apt-get install $FLAGS filezilla gm-notify ;
-
 #Web
-apt-get install $FLAGS filezilla;
+apt-get install $FLAGS filezilla gm-notify ;
 
 #LaTeX
 apt-get install $FLAGS texlive texlive-lang-french texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra bibtex2html;
