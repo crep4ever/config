@@ -46,6 +46,13 @@ git clone http://github.com/crep4ever/cv.git
 git clone http://github.com/crep4ever/biblio.git
 git clone git://git.lohrun.net/songbook.git
 
+#configure remotes
+cd songbook
+git remote add crep ssh://crep@lohrun.net/~crep/songbook.git
+cd ../songbook-client
+git remote add lohrun http://github.com/lohrun/songbook-client.git
+git remote add carreau http://github.com/Carreau/songbook-client.git
+
 #make a few links
 cd $HOME
 ln -s git/songbook songbook
