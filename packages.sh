@@ -9,7 +9,7 @@ FLAGS=" --yes --quiet --ignore-missing "
 apt-get update ;
 
 #Dev
-sudo apt-get install $FLAGS awesome build-essential emacs git-core qgit libmagick++-dev perl python subversion cmake valgrind qt4-dev-tools libqt4-sql-sqlite libqt4-declarative libxml++2.6-dev libarchive-dev;
+sudo apt-get install $FLAGS awesome build-essential emacs git-core qgit libmagick++-dev perl python subversion cmake valgrind qt4-dev-tools libqt4-sql-sqlite libqt4-declarative libxml++2.6-dev libarchive-dev ruby rubygems;
 
 #Multimedia
 sudo apt-get install $FLAGS audacity audacious audacious-plugins easytag gimp gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad imagemagick inkscape mplayer xcfa arista vlc lilypond gimp gimp-plugin-registry cheese pinta;
@@ -23,6 +23,10 @@ apt-get install $FLAGS texlive texlive-lang-french texlive-latex-extra texlive-f
 #Tools
 apt-get install $FLAGS gparted aspell-fr gcstar unrar ntfs-3g pdf2svg pdfmod htop ubuntu-restricted-extras lame nautilus-open-terminal;
 
+
 apt-get upgrade --yes --quiet;
+
+#Ruby modules
+gem install -y term-ansicolor;
 
 exit 0

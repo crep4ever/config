@@ -2,7 +2,7 @@
 
 require 'rubygems'
 
-gem 'term-ansicolor', '=1.0.3'
+gem 'term-ansicolor', '=1.0.6'
 require 'term/ansicolor'
 
 class GitCommit
