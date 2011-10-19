@@ -58,6 +58,14 @@ cd $HOME
 ln -s git/songbook songbook
 ln -s git/songbook-client songbook-client
 
+#retieve and local install of qcachegrind
+cd $HOME/.local/src
+svn co svn://anonsvn.kde.org/home/kde/trunk/KDE/kdesdk/kcachegrind kcachegrind
+cd kcachegrind/qcachegrind/
+qmake
+make -j 3
+cp qcachegrind $HOME/.local/bin
+
 #install songbook modes
 mkdir -p $HOME/.local/share/gtksourceview-2.0/language-specs/
 mkdir -p $HOME/.local/share/mime/packages/
