@@ -120,3 +120,6 @@ HISTFILESIZE=250000
 alias git-update='cd $HOME/git; for dir in `ls .`; do cd $dir; git pull origin master; cd ..; done;'
 
 alias git-status='cd $HOME/git; for dir in `ls .`; do cd $dir; git status; cd ..; done;'
+
+#add loopback support in pulseaudio
+pactl load-module module-loopback
