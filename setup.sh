@@ -2,12 +2,21 @@
 #Author: Romain Goffe
 #Date: 07/12/2010
 #Description: setup configuration files in home directory
-#todo el-get 
 
+#setup local directories
+cd $HOME
+mkdir .local
+mkdir -p .local/bin
+mkdir -p .local/src
+mkdir -p .local/include
+mkdir -p .local/lib
+
+#Dot files
 cp bashrc $HOME/.bashrc
 source $HOME/.bashrc
 cp gitconfig $HOME/.gitconfig
 cp face $HOME/.face
+cp git-unmerged.rb $HOME/.local
 
 #mplayer
 mkdir -p $HOME/.mplayer/
@@ -23,11 +32,12 @@ mv $HOME/.config/emacs.d/ $HOME/.config/emacs
 
 #inkscape
 mkdir -p $HOME/.config/inkscape/extensions
-mv inkscape/*.* $HOME/.config/inkscape/extensions
+cp inkscape/*.* $HOME/.config/inkscape/extensions
 
 #retrieve git repo
 cd $HOME
-mkdir $HOME/git && cd $HOME/git
+mkdir -p $HOME/git
+cd $HOME/git
 git clone http://github.com/crep4ever/songbook-client.git
 git clone http://github.com/crep4ever/songbook-documentation.git
 git clone http://github.com/crep4ever/songbook-gedit-mode.git
@@ -35,6 +45,13 @@ git clone http://github.com/crep4ever/songbook-emacs-mode.git
 git clone http://github.com/crep4ever/cv.git
 git clone http://github.com/crep4ever/biblio.git
 git clone git://git.lohrun.net/songbook.git
+
+#configure remotes
+cd songbook
+git remote add crep ssh://crep@lohrun.net/~crep/songbook.git
+cd ../songbook-client
+git remote add lohrun http://github.com/lohrun/songbook-client.git
+git remote add carreau http://github.com/Carreau/songbook-client.git
 
 #make a few links
 cd $HOME
