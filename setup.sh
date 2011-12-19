@@ -26,7 +26,7 @@ mv $HOME/.config/emacs.d/ $HOME/.config/emacs
 
 #inkscape
 mkdir -p $HOME/.config/inkscape/extensions
-mv inkscape/*.* $HOME/.config/inkscape/extensions
+cp inkscape/*.* $HOME/.config/inkscape/extensions
 
 #retrieve git repo
 cd $HOME
