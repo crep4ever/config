@@ -31,13 +31,19 @@ cp inkscape/*.* $HOME/.config/inkscape/extensions
 #retrieve git repo
 cd $HOME
 mkdir $HOME/git && cd $HOME/git
+#public
 git clone http://github.com/crep4ever/songbook-client.git
 git clone http://github.com/crep4ever/songbook-documentation.git
 git clone http://github.com/crep4ever/songbook-gedit-mode.git
 git clone http://github.com/crep4ever/songbook-emacs-mode.git
 git clone http://github.com/crep4ever/cv.git
 git clone http://github.com/crep4ever/biblio.git
+git clone http://github.com/crep4ever/latex-thesis.git
 git clone git://git.lohrun.net/songbook.git
+#private
+git clone http://github.com/crep4ever/pyramid.git
+git clone http://github.com/crep4ever/doc.git
+git clone http://github.com/crep4ever/thesis.git
 
 #make a few links
 cd $HOME
