@@ -9,6 +9,9 @@ source $HOME/.bashrc
 cp gitconfig $HOME/.gitconfig
 cp face $HOME/.face
 
+#rename home directories
+cp user-dirs.dirs $HOME/.config/ 
+
 #mplayer
 mkdir -p $HOME/.mplayer/
 cp mplayer $HOME/.mplayer/config
