@@ -104,9 +104,9 @@ then
     echo "Installing songbook modes..."
     mkdir -p $HOME/.local/share/gtksourceview-3.0/language-specs/
     mkdir -p $HOME/.local/share/mime/packages/
-    cp -f git/songbook-emacs-mode/songbook.el $HOME/.config/emacs
-    cp -f git/songbook-gedit-mode/songbook.lang  $HOME/.local/share/gtksourceview-2.0/language-specs
-    cp -f git/songbook-gedit-mode/songbook.xml  $HOME/.local/share/mime/packages
+    cp -f $HOME/git/songbook-emacs-mode/songbook.el $HOME/.config/emacs
+    cp -f $HOME/git/songbook-gedit-mode/songbook.lang  $HOME/.local/share/gtksourceview-2.0/language-specs
+    cp -f $HOME/git/songbook-gedit-mode/songbook.xml  $HOME/.local/share/mime/packages
 fi
 
 if $inkscape_flag
