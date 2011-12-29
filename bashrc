@@ -98,7 +98,7 @@ fi
 
 export PATH=$HOME/.local/:$HOME/.local/bin:/var/lib/gems/1.8/bin:$PATH
 export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude=\*~ --binary-files=without-match --line-number"
-export EDITOR=emacs
+export EDITOR=emacsclient
 export PAGER=most
 
 #Aliases
@@ -106,12 +106,12 @@ export PAGER=most
 alias cp='cp --interactive'
 alias mv='mv --interactive'
 alias rm='rm --interactive'
-alias clean='find -O3 . -name "*~" -or -name "*.bak" -or -name "#*#" -or -name "Thumbs.db" -or -name "desktop.ini" -print0 | xargs -0 rm -rf' 
+alias clean='find -O3 . -name "*~" -or -name "*.bak" -or -name "#*#" -or -name "Thumbs.db" -or -name "desktop.ini" -type f | xargs rm -f '
 alias c='clear'
 alias maek='make'
 alias amke='make'
 alias dc='cd'
-alias rmsvn='find . -name ".svn" -type d -print0 | xargs -0 rm -rf'
+alias rmsvn='find . -name ".svn" -type d | xargs rm -rf '
 alias git-update='cd $HOME/git; for dir in `ls .`; do cd $dir; git pull origin master; cd ..; done;'
 alias git-status='cd $HOME/git; for dir in `ls .`; do cd $dir; git status; cd ..; done;'
 alias git-unmerged='git-unmerged.rb'
