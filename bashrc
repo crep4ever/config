@@ -98,7 +98,9 @@ fi
 
 export PATH=$HOME/.local/:$HOME/.local/bin:/var/lib/gems/1.8/bin:$PATH
 export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude=\*~ --binary-files=without-match --line-number"
+export ALTERNATE_EDITOR=emacs
 export EDITOR=emacsclient
+export VISUAL=emacsclient
 export PAGER=most
 
 #Aliases

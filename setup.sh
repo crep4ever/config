@@ -21,8 +21,6 @@ rm -rf $HOME/.config/emacs/
 rm -f $HOME/.config/emacs
 cp -rf emacs.d/ $HOME/.config/
 mv -f $HOME/.config/emacs.d/ $HOME/.config/emacs
-mv -f $HOME/.config/emacs/emacs.desktop $HOME/.config/autostart/
-
 
 #flags
 dirs_flag=false
