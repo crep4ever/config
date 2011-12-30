@@ -99,8 +99,8 @@ fi
 export PATH=$HOME/.local/:$HOME/.local/bin:/var/lib/gems/1.8/bin:$PATH
 export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude=\*~ --binary-files=without-match --line-number"
 export ALTERNATE_EDITOR=emacs
-export EDITOR=emacsclient
-export VISUAL=emacsclient
+export EDITOR='emacsclient -c -a ""'
+export VISUAL='emacsclient -c -a ""'
 export PAGER=most
 
 #Aliases
@@ -118,6 +118,7 @@ alias git-update='cd $HOME/git; for dir in `ls .`; do cd $dir; git pull origin m
 alias git-status='cd $HOME/git; for dir in `ls .`; do cd $dir; git status; cd ..; done;'
 alias git-unmerged='git-unmerged.rb'
 alias top='htop'
+alias emacs='emacsclient -c -a ""'
 
 #History
 
