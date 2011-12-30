@@ -18,7 +18,7 @@
 ;; Color theme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-tango)
+(color-theme-tangotango)
 
 ;; Interface configuration
 (line-number-mode 1)

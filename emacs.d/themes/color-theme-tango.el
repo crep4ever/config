@@ -1,35 +1,3 @@
-;;; color-theme-library.el --- The real color theme functions
-
-;; Copyright (C) 2005, 2006  Xavier Maillard <zedek@gnu.org>
-;; Copyright (C) 2005, 2006  Brian Palmer <bpalmer@gmail.com>
-
-;; Version: 0.0.9
-;; Keywords: faces
-;; Author: Brian Palmer, Xavier Maillard
-;; Maintainer: Xavier Maillard <zedek@gnu.org>
-;; URL: http://www.emacswiki.org/cgi-bin/wiki.pl?ColorTheme
-
-;; This file is not (YET) part of GNU Emacs.
-
-;; This is free software; you can redistribute it and/or modify it under
-;; the terms of the GNU General Public License as published by the Free
-;; Software Foundation; either version 2, or (at your option) any later
-;; version.
-;;
-;; This is distributed in the hope that it will be useful, but WITHOUT
-;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-;; FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-;; for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
-;; MA 02111-1307, USA.
-
-;; Code:
-(eval-when-compile
-  (require 'color-theme))
-
 ;;; Color theme based on Tango Palette. Created by danranx@gmail.com
 (defun color-theme-tango ()
   "A color theme based on Tango Palette."
@@ -54,7 +22,6 @@
      (fringe ((t (:background "grey10"))))
      (mode-line ((t (:foreground "#eeeeec" :background "#555753"))))
      (region ((t (:background "#555753"))))
-     (font-lock-variable-name-face ((t (:foreground "#fcaf3e"))))
      (font-lock-builtin-face ((t (:foreground "#729fcf"))))
      (font-lock-comment-face ((t (:foreground "#888a85"))))
      (font-lock-constant-face ((t (:foreground "#8ae234"))))
@@ -62,6 +29,7 @@
      (font-lock-keyword-face ((t (:foreground "#729fcf" :bold t))))
      (font-lock-string-face ((t (:foreground "#ad7fa8" :italic t))))
      (font-lock-type-face ((t (:foreground "#8ae234" :bold t))))
+     (font-lock-variable-name-face ((t (:foreground "#eeeeec"))))
      (font-lock-warning-face ((t (:bold t :foreground "#f57900"))))
      (font-lock-function-name-face ((t (:foreground "#edd400" :bold t :italic t))))
      (comint-highlight-input ((t (:italic t :bold t))))
@@ -75,5 +43,5 @@
      (info-xref-visited ((t (:foreground "#ad7fa8"))))
      )))
 
+(provide 'color-theme-tango)
 
-;;; color-theme-library.el ends here
