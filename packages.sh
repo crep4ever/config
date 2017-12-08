@@ -1,32 +1,29 @@
 #!/bin/sh
 #Author: Romain Goffe
-#Date: 10/12/2010
+#Date: 08/12/2017
 #Description: packages install for ubuntu
 #needs to be run as root
 
 FLAGS=" --yes --quiet --ignore-missing "
 
-apt-get update ;
+sudo apt-get update;
 
-#Dev
-sudo apt-get install $FLAGS awesome build-essential emacs git qgit libmagick++-dev perl python subversion cmake valgrind qt4-dev-tools libxml++2.6-dev libarchive-dev libhunspell-dev ruby rubygems doxygen;
+# Ubuntu
+sudo apt-get install $FLAGS build-essential ubuntu-restricted-extras virtualbox-guest-dkms emacs git gitg qgit cmake clang doxygen doxygen-gui;
 
-#Multimedia
-sudo apt-get install $FLAGS audacity audacious audacious-plugins easytag gimp gimp-plugin-registry gstreamer0.10-ffmpeg gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad imagemagick inkscape mplayer xcfa arista vlc lilypond  cheese pinta lame;
+# Dev
+sudo apt-get install $FLAGS emacs git gitg qgit cmake clang doxygen doxygen-gui valgrind kcachegrind massif-visualizer qtcreator;
 
-#Web
-apt-get install $FLAGS filezilla gm-notify ;
+# Multimedia
+sudo apt-get install $FLAGS gimp inkscape vlc gnuplot pdf2svg pstoedit imagemagick;
 
-#LaTeX
-apt-get install $FLAGS texlive texlive-lang-french texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra bibtex2html;
+# LaTeX
+sudo apt-get install $FLAGS texlive texlive-latex-base;
 
-#Tools
-apt-get install $FLAGS gparted colordiff aspell-fr gcstar unrar ntfs-3g pdf2svg pdfmod htop ubuntu-restricted-extras lame nautilus-open-terminal most;
+# Tools
+sudo apt-get install $FLAGS gparted htop most colordiff;
 
-
-apt-get upgrade --yes --quiet;
-
-#Ruby modules
-gem install -y term-ansicolor;
+sudo apt-get upgrade --yes --quiet;
 
 exit 0
+
