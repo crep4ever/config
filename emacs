@@ -12,8 +12,8 @@
 (global-set-key "\M-g" 'goto-line)
 
 ;; Transparency
-(set-frame-parameter (selected-frame) 'alpha '(100 95))
-(add-to-list 'default-frame-alist '(alpha 100 95))
+;;(set-frame-parameter (selected-frame) 'alpha '(100 95))
+;;(add-to-list 'default-frame-alist '(alpha 100 95))
 
 ;; Color theme
 (require 'color-theme)
@@ -67,4 +67,5 @@ table determines which characters these are."
 	      "The region has %d words." count))))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
+(add-to-list 'default-frame-alist '(foreground-color . "#eff0f1"))
+(add-to-list 'default-frame-alist '(background-color . "#31363b"))
